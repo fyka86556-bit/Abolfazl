@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>برای ایلار</title>
+<title>برای ایلار ✨</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -28,15 +28,15 @@ padding:20px;
 
 .card{
 width:100%;
-max-width:750px;
-background:rgba(255,255,255,0.07);
+max-width:700px;
+background:rgba(255,255,255,0.08);
 backdrop-filter:blur(20px);
 border:1px solid rgba(255,255,255,0.1);
 border-radius:30px;
-padding:45px;
-box-shadow:0 20px 50px rgba(0,0,0,0.4);
-color:white;
+padding:45px 30px;
+box-shadow:0 25px 60px rgba(0,0,0,.4);
 text-align:center;
+color:#fff;
 }
 
 .page{
@@ -59,51 +59,40 @@ transform:translateY(0);
 }
 }
 
-.small-title{
+.small{
+letter-spacing:3px;
 font-size:12px;
-letter-spacing:4px;
-color:#94a3b8;
 margin-bottom:15px;
+color:#94a3b8;
 }
 
 h1{
-font-weight:600;
 font-size:40px;
-margin-bottom:20px;
-color:white;
+margin-bottom:25px;
+font-weight:700;
 }
 
 p{
 font-size:18px;
-line-height:2.2;
+line-height:2.3;
 color:#e2e8f0;
-}
-
-.highlight{
-color:#f9a8d4;
-font-weight:600;
 }
 
 .buttons{
 margin-top:35px;
 display:flex;
 justify-content:center;
-gap:15px;
+gap:12px;
 }
 
 button{
 border:none;
-padding:12px 30px;
+padding:12px 28px;
 border-radius:15px;
 font-family:'Vazirmatn',sans-serif;
 font-size:16px;
 cursor:pointer;
-transition:0.3s;
-}
-
-.prev{
-background:rgba(255,255,255,0.1);
-color:white;
+transition:.3s;
 }
 
 .next{
@@ -111,78 +100,85 @@ background:#ec4899;
 color:white;
 }
 
+.prev{
+background:rgba(255,255,255,.12);
+color:white;
+}
+
 button:hover{
 transform:translateY(-3px);
 }
 
-.final-text{
-margin-top:25px;
-line-height:2.4;
+.final{
+margin-top:30px;
 font-size:20px;
+line-height:2.4;
 color:#fbcfe8;
 }
 
-.signature{
+.footer{
 margin-top:25px;
-color:#94a3b8;
 font-size:14px;
+color:#94a3b8;
 }
 
 </style>
 </head>
-
 <body>
 
 <div class="card">
 
 <div class="page active">
 
-<div class="small-title">WELCOME</div>
+<div class="small">WELCOME</div>
 
 <h1>سلام ایلار ✨</h1>
 
 <p>
-خوش اومدی :)
+یه چیز کوچیک برات ساختم...
 <br><br>
-یه چیز کوچیک برات ساختم،
-فقط خواستم ببینیش.
+فقط خواستم ببینیش :)
 </p>
 
 </div>
 
 <div class="page">
 
-<div class="small-title">PAGE 2</div>
+<div class="small">PAGE 2</div>
 
 <h1>یه توضیح کوتاه</h1>
 
 <p>
 من این سایت رو ساختم برای حرف زدن
-خودم و <span class="highlight">خودت</span>.
+خودم و خودت.
 <br><br>
 دوست دارم کم‌کم بهترش کنم.
-جایی که بتونیم حرف بزنیم،
+<br>
+یه جای کوچیک که بتونیم حرف بزنیم،
 پیام بذاریم و هر چیزی که دوست داشتیم
-برای همدیگه بفرستیم.
+با هم به اشتراک بذاریم.
 </p>
 
 </div>
 
 <div class="page">
 
-<div class="small-title">LAST PAGE</div>
+<div class="small">LAST PAGE</div>
 
-<h1>نظر تو برام مهمه</h1>
+<h1>یه حرف آخر</h1>
 
 <p>
-اگه موافقی که این سایت رو ادامه بدم و روش وقت بذارم،
+اگه موافقی که این سایت رو ادامه بدم و
+بیشتر روش وقت بذارم،
 برگرد و استوریم رو لایک کن 🙂
 <br><br>
 اگه هم موافق نیستی،
-اشکالی نداره و لازم نیست کاری بکنی.
+اشکالی نداره.
+<br><br>
+فقط می‌خواستم این صفحه رو برای تو بسازم.
 </p>
 
-<div class="final-text">
+<div class="final">
 
 دوستت دارم ❤️
 
@@ -196,12 +192,18 @@ font-size:14px;
 
 <br>
 
-خداحافظ ...
+خداحافظ...
 
 </div>
 
-<div class="signature">
-ساخته شده برای ایلار ✨
+<div class="footer">
+
+────────
+
+<br><br>
+
+ساخته شده توسط یک نفر که بهت اهمیت میده ✨
+
 </div>
 
 </div>
@@ -216,14 +218,13 @@ font-size:14px;
 <script>
 
 let currentPage = 0;
-
-const pages = document.querySelectorAll('.page');
+const pages = document.querySelectorAll(".page");
 
 function showPage(index){
 pages.forEach(page=>{
-page.classList.remove('active');
+page.classList.remove("active");
 });
-pages[index].classList.add('active');
+pages[index].classList.add("active");
 }
 
 function nextPage(){
