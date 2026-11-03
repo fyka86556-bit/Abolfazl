@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سلام :)</title>
+
+<style>
+body{
+    font-family:Tahoma,sans-serif;
+    background:#f8f9ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
+    text-align:center;
+}
+
+.box{
+    background:white;
+    width:90%;
+    max-width:600px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+h1{
+    color:#4f46e5;
+}
+
+p{
+    line-height:2;
+}
+
+.buttons{
+    margin-top:25px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#4f46e5;
+    color:white;
+    cursor:pointer;
+    margin:5px;
+    font-size:16px;
+}
+
+button:hover{
+    background:#3730a3;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <div class="page active">
+        <h1>سلام 👋</h1>
+        <p>
+            خوش اومدی :)
+        </p>
+    </div>
+
+    <div class="page">
+        <h1>یه حرف کوچیک</h1>
+        <p>
+            من این سایت رو ساختم برای حرف زدن خودم و خودت.
+            <br><br>
+            داخلش می‌تونیم پیام بدیم،
+            درباره هر چیزی حرف بزنیم
+            و هر چیزی که دوست داریم برای همدیگه بفرستیم.
+        </p>
+    </div>
+
+    <div class="page">
+        <h1>نظر تو؟</h1>
+        <p>
+            اگه موافقی که این سایت رو ادامه بدم و بیشتر بسازمش،
+            برگرد و استوریم رو لایک کن 🙂
+            <br><br>
+            اگه هم موافق نیستی،
+            لازم نیست لایک کنی.
+        </p>
+    </div>
+
+    <div class="buttons">
+        <button onclick="prevPage()">قبلی</button>
+        <button onclick="nextPage()">بعدی</button>
+    </div>
+
+</div>
+
+<script>
+
+let currentPage = 0;
+
+const pages = document.querySelectorAll('.page');
+
+function showPage(index){
+    pages.forEach(page=>{
+        page.classList.remove('active');
+    });
+
+    pages[index].classList.add('active');
+}
+
+function nextPage(){
+    if(currentPage < pages.length - 1){
+        currentPage++;
+        showPage(currentPage);
+    }
+}
+
+function prevPage(){
+    if(currentPage > 0){
+        currentPage--;
+        showPage(currentPage);
+    }
+}
+
+</script>
+
+</body>
+</html>
 
